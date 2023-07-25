@@ -24,8 +24,7 @@ app.use(adminRoutes);
 
 console.log(process.env.NODE_PORT)
 
-const port = 8000;
 
-app.listen(process.env.NODE_PORT || port, () => {
-    console.log('Server Running');
+app.listen(process.env.NODE_PORT, () => {
+    console.log(`Server Running on port ${process.env.NODE_PORT}`);
 });
