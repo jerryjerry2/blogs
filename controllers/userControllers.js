@@ -1,5 +1,14 @@
+const con = require('../config/db');
+
 const getAll = (req, res) => {
-    res.render('user/index');
+    con.query('select * from user', (err, result) => {
+        if(err){
+            console.log(err);
+        }else{
+            res.render('user/index', {result});
+        }
+    }) 
+    
 }
 
 module.exports = {
