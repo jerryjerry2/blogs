@@ -26,6 +26,6 @@ console.log(process.env.NODE_PORT)
 
 const port = 8000;
 
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.NODE_PORT || port, () => {
     console.log('Server Running');
 });
