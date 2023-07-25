@@ -22,9 +22,9 @@ app.use(userRoutes);
 app.use(adminRoutes);
 
 
-console.log(process.env.NODE_PORT)
+console.log(process.env.PORT)
 
 
-app.listen(process.env.NODE_PORT, () => {
-    console.log(`Server Running on port ${process.env.NODE_PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server Running on port ${process.env.PORT}`);
 });
