@@ -2,6 +2,8 @@ const express = require('express');
 const upload = require('express-fileupload');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const dotenv = require('dotenv');
+
 
 const app = express();
 
@@ -19,4 +21,7 @@ app.use(userRoutes);
 //Admin
 app.use(adminRoutes);
 
-app.listen(8000);
+const PORT = process.env.NODE_PORT || 8000;
+app.listen(PORT, () => {
+    console.log(`Server start in ${process.env.NODE_ENV} on port ${PORT}`);
+});
