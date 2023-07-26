@@ -2,7 +2,7 @@ const express = require('express');
 const upload = require('express-fileupload');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
-require('dotenv').config()
+require('dotenv').config();
 
 
 const app = express();
@@ -21,10 +21,4 @@ app.use(userRoutes);
 //Admin
 app.use(adminRoutes);
 
-
-console.log(process.env.PORT)
-
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server Running on port ${process.env.PORT}`);
-});
+app.listen(process.env.PORT);
